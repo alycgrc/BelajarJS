@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengakses dan Memanipulasi Elemen</title>
+</head>
+<body>
+    <h1 id="header">Hellow PPLG</h1>
+    <P class="description">Ini Adalah Contoh Kode Program Dari Documenct Objek</P>
+    <button id="changeContent">Ubah Context</button>
+    <script>
+        const header = document.getElementById("header");
+        const paragraph = document.querySelector(".description");
+        const button = document.getElementById("changeContent");
+
+        button.addEventListener("click", () =>{
+            header.textContent = "Hello, Document Object";
+            paragraph.textContent =  "Content telah di ubah oleh document object";
+        });
+    </script>
+</body>
+</html>

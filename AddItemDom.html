@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Menambahkan Elemen Baru</title>
+</head>
+<body>
+   <ul id="list">
+        <li>Item1</li>
+        <li>Item2</li>
+   </ul>
+   <button id="addItem">Add Item</button> 
+   <script>
+    const list = document.getElementById("list");
+    const button =  document.getElementById("addItem");
+    button.addEventListener("click", () => {
+        const newItem = document.createElement("li");
+        newItem.textContent = "New Item";
+        list.appendChild(newItem);
+    });
+   </script>
+</body>
+</html>
