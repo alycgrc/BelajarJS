@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div id="container">
+        <p>Paragraph Pertama</p>
+    </div>
+    <button id="addNode">Add Node</button>
+    <button id="removeNode">Remove Node</button>
+    <script>
+        const container = document.getElementById("container");
+        const addNodeButton = document.getElementById("addNode");
+        const removeNodeButton = document.getElementById("removeNode");
+
+        addNodebutton.addEventListener("click", () => {
+            const newParagraph = document.createElement("p");
+            newParagraph.textContent = "Paragraph Baru";
+            container.appendChild(newParagraph);
+        });
+        removeNodeButton.addEventListener("click", () => {
+            if(container.lastChild){
+                container.removeChild(container.lastChild);
+            }
+        });
+    </script>
+</body>
+</html>
